@@ -43,7 +43,8 @@ def karatsuba_recursive(x,y):
 	n = max(get_digits(x),get_digits(y))
 
 	# base condition: if n = 1, then we just return the product of the x and y
-	return x * y
+	if n == 1:
+		return x * y
 
 	tenpowernby2 = int(math.pow(10,n/2))
 	tenpowern = int(math.pow(10,2*(n/2)))        # this is not the same as 10^n when n is odd. 
@@ -65,7 +66,7 @@ def karatsuba_recursive(x,y):
 
 	temp = prod_sum - prod_ac - prod_bd
         
-	return prod_ac*tenpowern + prod_bd + prod_sum*tenpowernby2
+	return prod_ac*tenpowern + prod_bd + temp*tenpowernby2
 		
 	
 def karatsuba_main(x,y):
@@ -77,13 +78,9 @@ def karatsuba_main(x,y):
 	except Exception:
 		print "Both x and y should be integers!"
 		return -1
-	
-	sx = 1  # sign of x
-	sy = 1  # sign of y
-	if x < 0:
-		sx = -1
-	if y < 0:
-		sy = -1
+
+	sx = x/abs(x)
+	sy = y/abs(y)	
 
 	return sx * sy * karatsuba_recursive(abs(x),abs(y))
 
