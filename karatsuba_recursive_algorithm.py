@@ -79,6 +79,9 @@ def karatsuba_main(x,y):
 		print "Both x and y should be integers!"
 		return -1
 
+	if x == 0 or y == 0:
+		return 0
+
 	sx = x/abs(x)
 	sy = y/abs(y)	
 
