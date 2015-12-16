@@ -30,7 +30,10 @@ Error Handling: This implementation checks if the input numbers x and y are infa
 
 def get_digits(num):
 	''' This routine counts the number of digits in num and returns the same. '''
+
 	count = 0
+	if num == 0:
+		return 1
 	while num>0:
 		count += 1
 		num /= 10
@@ -38,6 +41,8 @@ def get_digits(num):
 
 def karatsuba_recursive(x,y):
 	''' This is the most important function in this program which implements the karatsuba logic. '''
+
+	print x, y
 
 	# compute the number of digits n
 	n = max(get_digits(x),get_digits(y))
