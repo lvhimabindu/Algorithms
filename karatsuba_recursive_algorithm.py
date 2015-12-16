@@ -42,8 +42,6 @@ def get_digits(num):
 def karatsuba_recursive(x,y):
 	''' This is the most important function in this program which implements the karatsuba logic. '''
 
-	print x, y
-
 	# compute the number of digits n
 	n = max(get_digits(x),get_digits(y))
 
