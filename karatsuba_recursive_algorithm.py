@@ -24,7 +24,9 @@ Algorithm: Karatsuba algorithm exploits the fact that x and y can be expressed a
 
 Note: If n is odd then the final product is computed as: 10^(2*floor(n/2)) * ac + bd + 10^(floor(n/2)) * temp
 
-Error Handling: This implementation checks if the input numbers x and y are infact integers and handles the error cases appropriately. The code can handle both positive and negative numbers as well as multiplication by zero. Floating point numbers are rounded down to the closest integers and then multiplied. Check the file test_karatsuba_recursive_algorithm.py for a list of all the test cases. 
+Error Handling: This implementation checks if the input numbers x and y are infact integers and handles the error cases appropriately. 
+The code can handle both positive and negative numbers as well as multiplication by zero. 
+Floating point numbers are rounded down to the closest integers and then multiplied. Check the file test_karatsuba_recursive_algorithm.py for a list of all the test cases. 
 
 '''
 
