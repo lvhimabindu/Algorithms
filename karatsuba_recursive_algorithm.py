@@ -77,8 +77,9 @@ def karatsuba_recursive(x,y):
 		
 	
 def karatsuba_main(x,y):
-	''' This routine checks if x and y are indeed integers and handled the type errors appropriately and then calls the karatsuba_recursive functin.
+	''' This routine checks if x and y are indeed integers and handled the type errors appropriately and then calls the karatsuba_recursive function.
 	It also ensures the sign of the product is returned correctly in the result. '''
+
 	try: 
 		x = int(x)
 		y = int(y)
