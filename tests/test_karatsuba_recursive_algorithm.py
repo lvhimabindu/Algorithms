@@ -70,12 +70,12 @@ class test_karatsuba(unittest.TestCase):
     def test_strx(self):
 	''' This code tests the scenario when x is a string '''
 	res = karatsuba_main('abc',128)
-	self.assertEqual(res,-1)
+	self.assertIsNone(res)
 
     def test_stry(self):
 	''' This code tests the scenario when y is a string '''
 	res = karatsuba_main(1089,'d')
-	self.assertEqual(res,-1)
+	self.assertIsNone(res)
 
     def test_large(self):
 	''' This code tests the multiplication of two large numbers '''
@@ -101,6 +101,28 @@ class test_karatsuba(unittest.TestCase):
 	''' This code tests the multiplication of a single digit number with other number '''
 	res = karatsuba_main(3458,9)
 	self.assertEqual(res,31122)
+
+    def test_neg_pos(self):
+	''' This code tests the multiplication of a negative number with a positive number '''
+	res = karatsuba_main(-678,28)
+	self.assertEqual(res,-18984)
+	
+    def test_neg_neg(self):
+	''' This code tests the multiplication of two negative numbers '''
+	res = karatsuba_main(-281,-9067)
+	self.assertEqual(res,2547827)
+
+    def test_square(self):
+	''' This code tests the multiplication of the same number twice '''
+	res1 = karatsuba_main(13,13)
+	self.assertEqual(res1,169)
+	res2 = karatsuba_main(6,6)
+	self.assertEqual(res2,36)
+
+    def test_primes(self):
+	''' This code tests the multiplication of two prime numbers '''
+	res = karatsuba_main(31,37)
+	self.assertEqual(res,1147)
 
 
 if __name__ == '__main__':

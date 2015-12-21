@@ -85,7 +85,7 @@ def karatsuba_main(x,y):
 		y = int(y)
 	except Exception:
 		print "Both x and y should be integers!"
-		return -1
+		return None
 
 	''' If atleast one of the numbers is zero, return 0 ''' 
 	if x == 0 or y == 0:
@@ -108,5 +108,5 @@ if __name__ == '__main__':
 			
 
 	prod = karatsuba_main(x,y)
-	if prod != -1:
+	if prod is not None:
 		print "The product of %s and %s is %d" %(x,y,prod)
