@@ -1,6 +1,10 @@
 import unittest
 import sys
-sys.path.insert(0, '/Users/himalv/Algorithms/')
+
+# Insert the path where the main code file 'karatsuba_recursive_algorithm.py is present 
+sys.path.insert(0, '../Algorithms/')
+
+# Import the appropriate function that needs to be called along with the test input. 
 from karatsuba_recursive_algorithm import karatsuba_main
 
 class test_karatsuba(unittest.TestCase):
