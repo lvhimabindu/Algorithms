@@ -104,9 +104,11 @@ class test_karatsuba(unittest.TestCase):
 
     def test_neg_pos(self):
 	''' This code tests the multiplication of a negative number with a positive number '''
-	res = karatsuba_main(-678,28)
-	self.assertEqual(res,-18984)
-	
+	res1 = karatsuba_main(-678,28)
+	self.assertEqual(res1,-18984)
+	res2 = karatsuba_main(28,-678)
+	self.assertEqual(res2,-18984)     
+
     def test_neg_neg(self):
 	''' This code tests the multiplication of two negative numbers '''
 	res = karatsuba_main(-281,-9067)
