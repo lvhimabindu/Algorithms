@@ -1,6 +1,7 @@
 import math
 
 ''' 
+
 This file implements the Karatsuba algorithm for multiplying two integers. 
 
 Input: Two integer numbers x and y
@@ -26,7 +27,8 @@ Note: If n is odd then the final product is computed as: 10^(2*floor(n/2)) * ac 
 
 Error Handling: This implementation checks if the input numbers x and y are infact integers and handles the error cases appropriately. 
 The code can handle both positive and negative numbers as well as multiplication by zero. 
-Floating point numbers are rounded down to the closest integers and then multiplied. Check the file test_karatsuba_recursive_algorithm.py for a list of all the test cases. 
+Floating point numbers are rounded down to the closest integers and then multiplied. 
+Check the file test_karatsuba_recursive_algorithm.py for a list of all the test cases. 
 
 '''
 
