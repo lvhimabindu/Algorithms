@@ -20,7 +20,7 @@ unsorted element (putting it in sorted order), and moving the sublist boundaries
 
 Note: This code sorts arrays which comprise of a mix of integer, string and float elements. Ex: If the input array is ['abc',132], then the result is [132,'abc']
 
-Error handling: This code handles scenarios such as empty array input and a single element array. Check the file test_sorting_algorithms.py for a list of all the test cases. 
+Error handling: This code handles scenarios such as empty array input and a single element array. Check the file test_selection_sort.py for a list of all the test cases. 
 
 '''
 
