@@ -21,7 +21,7 @@ Error handling: This code handles scenarios such as empty array input and a sing
 
 '''
 
-def insertion_sort(arr):
+def insertion_sort_func(arr):
 	''' This function implements the insertion sort. It takes an array (possibly unsorted) as input and outputs a sorted array in ascending order. '''
 	
 	n = len(arr)
@@ -56,7 +56,7 @@ if __name__ == '__main__':
 	
 
 	print "The Sorted Array is: "
-	for ele in insertion_sort(arr):
+	for ele in insertion_sort_func(arr):
 		print ele
 	
 	

@@ -24,7 +24,7 @@ Error handling: This code handles scenarios such as empty array input and a sing
 
 '''
 
-def selection_sort(arr):
+def selection_sort_func(arr):
 	''' This function implements the selection sort. It takes an array (possibly unsorted) as input and outputs a sorted array in ascending order. '''
 	
 	n = len(arr)
@@ -57,7 +57,7 @@ if __name__ == '__main__':
 	
 
 	print "The Sorted Array is: "
-	for ele in selection_sort(arr):
+	for ele in selection_sort_func(arr):
 		print ele
 	
 	
