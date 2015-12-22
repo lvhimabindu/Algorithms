@@ -66,6 +66,8 @@ def run_simulation(iters,num_doors):
 
 
 if __name__ == '__main__':
+	''' This is the main function which takes the number of iterations as the input, checks it appropriately and then call the run_simulation function '''
+
 	try:
 		iters = input("Enter the number of iterations: ")
 		iters = int(iters)
