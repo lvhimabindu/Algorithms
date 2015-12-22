@@ -25,7 +25,9 @@ Simulation Algorithm:
 
 Error Handling: This implementation checks if the input (number of iterations) is indeed an integer. 
 
-Note: Input the number of iterations to be in the order of atleast tens of thousands. Setting this value to a very small number does not guaranteee convergence. 
+Note: 
+1. Input the number of iterations to be in the order of atleast tens of thousands. Setting this value to a very small number does not guaranteee convergence. 
+2. This code is generic enough to handle the problem setting with varying number of doors. 
 
 '''
 
@@ -45,7 +47,7 @@ def player_chooses(num_doors):
 	return door_chosen
 
 
-def run_simulation(iters):
+def run_simulation(iters,num_doors):
 	''' This function computes the probability of stay and switch wins from the simulation '''
 	''' Note: p(stay_win) = 1 - p(switch_win) given the way the process is constructed. 
 	Instead of using this though, we compute stay_win and switch_win separately (as a sanity check).'''
@@ -53,8 +55,8 @@ def run_simulation(iters):
 	stay_win = 0
 	switch_win = 0
 	for i in range(iters):
-		config_arr = assign_goats_car(3)
-		door_chosen = player_chooses(3)
+		config_arr = assign_goats_car(num_doors)
+		door_chosen = player_chooses(num_doors)
 		if config_arr[door_chosen] == 1:
 			stay_win += 1
 		else:
@@ -71,4 +73,4 @@ if __name__ == '__main__':
 		print "Number of iterations should be an integer!"
 		sys.exit(-1)
 
-	run_simulation(iters)
+	run_simulation(iters,3)		# Setting the number of doors to 3
