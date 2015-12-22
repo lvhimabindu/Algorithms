@@ -16,6 +16,11 @@ Suppose you're on a game show, and you're given the choice of three doors: Behin
 You pick a door, say No. 1, and the host, who knows what's behind the doors, opens another door, say No. 3, which has a goat. 
 He then says to you, "Do you want to pick door No. 2?" Is it to your advantage to switch your choice?
 
+Answer to Monty Hall Problem:
+
+It is interesting to note that the answer to the question posed is that there is an advantage to switching your choice. More precisely, the probability of a stay win (no switching) is 1/3 
+while the probability of a switch win is 2/3. 
+
 Simulation Algorithm:
 
 1. Randomly assign goats and car behind one of the doors numbered 1 through 3. 
