@@ -76,10 +76,6 @@ if __name__ == '__main__':
                                 else:
                                         raise Exception	
 
-	except CannotBeZero:
-		print "The number of elements cannot be zero!"
-		sys.exit(-1)
-	
 	except Exception:
                 print "Please enter valid input!"
                 sys.exit(-1)
