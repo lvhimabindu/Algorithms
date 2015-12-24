@@ -1,3 +1,5 @@
+import sys
+
 '''
 
 This program implements a naive approach to count the number of inversions in a given array. 
