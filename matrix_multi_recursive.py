@@ -36,6 +36,8 @@ def matrix_multi_recursive(A,B):
                 return np.array([[A[0,0] * B[0,0]]])
 
 	# Note that A and B are square matrices and are of dimensions 2^n * 2^n
+	# Below are the 8 products that need to be computed 
+
 	A11B11 = matrix_multi_recursive(A[:D/2,:D/2], B[:D/2,:D/2])
 	A12B21 = matrix_multi_recursive(A[:D/2,D/2:D], B[D/2:D,:D/2])
 	A11B12 = matrix_multi_recursive(A[:D/2,:D/2], B[:D/2,D/2:D])
@@ -44,13 +46,15 @@ def matrix_multi_recursive(A,B):
 	A22B21 = matrix_multi_recursive(A[D/2:D,D/2:D], B[D/2:D,:D/2])
 	A21B12 = matrix_multi_recursive(A[D/2:D,:D/2], B[:D/2,D/2:D])
 	A22B22 = matrix_multi_recursive(A[D/2:D,D/2:D], B[D/2:D,D/2:D])
-		
-	res = np.zeros(shape=(D,D),dtype=int)
 	
-   	LT = A11B11 + A12B21
-	RT = A11B12 + A12B22
-	LB = A21B11 + A22B21
-	RB = A21B12 + A22B22
+	# Summing products above to get D/2 * D/2 matrices
+		
+   	LT = A11B11 + A12B21			# left top
+	RT = A11B12 + A12B22			# right top
+	LB = A21B11 + A22B21			# left bottom
+	RB = A21B12 + A22B22			# right bottom
+
+	res = np.zeros(shape=(D,D),dtype=int)
 
 	fill_up_matrix(res,LT,0,0)
 	fill_up_matrix(res,RT,0,D/2)
