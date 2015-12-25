@@ -47,15 +47,15 @@ if __name__ == '__main__':
 		m1 = int(input("Enter the number of rows in matrix 1: "))
 		n1 = int(input("Enter the number of columns in matrix 1: "))
 		m2 = int(input("Enter the number of rows in matrix 2: "))
-		n2 = int(input("Enter the number of rows in matrix 2: "))
+		n2 = int(input("Enter the number of columns in matrix 2: "))
 		
 		if m1 == 0 or n1 == 0 or m2 == 0 or n2 == 0:
 			print "The number of elements cannot be zero!"
-			sys.exit(-1)
+			raise Exception
 
 		if n1 != m2:
 			print "The number of columns of matrix 1 should be the same as the number of rows of matrix 2"
-			sys.exit(-1)
+			raise Exception
 		
 		A = [[0] * n1 for i in range(m1)]
 		B = [[0] * n2 for i in range(m2)]
