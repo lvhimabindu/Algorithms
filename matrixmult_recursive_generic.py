@@ -31,7 +31,7 @@ def fill_up_matrix(orig,mat,rindex,cindex):
 def squarepower2_recursive(A,B,D):
 	''' This function computes the product of two square matrices A and B of size 2^n * 2^n'''
 	
-	if D == 1:
+	if D == 1:					# this is the exit condition for all the functions in this code. 
                 return np.array([[A[0,0] * B[0,0]]])
 
 	# Note that A and B are square matrices and are of dimensions 2^n * 2^n
