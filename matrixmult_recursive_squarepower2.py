@@ -32,6 +32,7 @@ def matrix_multi_recursive(A,B):
 	
 	D = len(A)			# D is the dimension of matrices. A and B are of size D * D and D = 2^n for some non-negative integer n
 
+	# base condition
 	if D == 1:
                 return np.array([[A[0,0] * B[0,0]]])
 
